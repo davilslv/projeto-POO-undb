@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 /*
-Alunos: Davi Lemos da Silva, André Correa Martins
+Alunos: Davi Lemos da Silva, André Correa Martins, André Costa
 
 PS.: Professor, acabei nao me tocando e fiz pelo intellij, espero que nao seja problema e por isso estou
 enviando o arquivo compactado para o senhor imporatar para o netbeans sem problemas :D
