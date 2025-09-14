@@ -1,5 +1,13 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+/*
+Alunos: Davi Lemos da Silva, André Correa Martins
+
+PS.: Professor, acabei nao me tocando e fiz pelo intellij, espero que nao seja problema e por isso estou
+enviando o arquivo compactado para o senhor imporatar para o netbeans sem problemas :D
+ */
+
 import java.util.Scanner;
 
 public class CalculadoraImpostos {
@@ -58,59 +66,57 @@ public class CalculadoraImpostos {
 
     // Conversores pra enum
     private static Origem intToOrigem(int i) {
-        switch (i) {
-            case 1: return Origem.CHINA;
-            case 2: return Origem.UE;
-            case 3: return Origem.JAPAO;
-            case 4: return Origem.COREIA;
-            case 5: return Origem.VIETNA;
-            case 6: return Origem.TAILANDIA;
-            case 7: return Origem.CANADA;
-            case 8: return Origem.MEXICO;
-            case 10: return Origem.BRASIL;
-            default: return Origem.OUTROS;
-        }
+        return switch (i) {
+            case 1 -> Origem.CHINA;
+            case 2 -> Origem.UE;
+            case 3 -> Origem.JAPAO;
+            case 4 -> Origem.COREIA;
+            case 5 -> Origem.VIETNA;
+            case 6 -> Origem.TAILANDIA;
+            case 7 -> Origem.CANADA;
+            case 8 -> Origem.MEXICO;
+            case 10 -> Origem.BRASIL;
+            default -> Origem.OUTROS;
+        };
     }
 
     private static Categoria intToCategoria(int i) {
-        switch (i) {
-            case 1: return Categoria.GERAL;
-            case 2: return Categoria.FARMACOS;
-            case 3: return Categoria.SEMICONDUTORES;
-            case 4: return Categoria.COBRE;
-            case 5: return Categoria.MADEIRA;
-            case 6: return Categoria.ENERGIA_MINERAIS;
-            case 7: return Categoria.BULLION;
-            default: return Categoria.GERAL;
-        }
+        return switch (i) {
+            case 2 -> Categoria.FARMACOS;
+            case 3 -> Categoria.SEMICONDUTORES;
+            case 4 -> Categoria.COBRE;
+            case 5 -> Categoria.MADEIRA;
+            case 6 -> Categoria.ENERGIA_MINERAIS;
+            case 7 -> Categoria.BULLION;
+            default -> Categoria.GERAL;
+        };
     }
 
     // Isso aqui é pra formatar o texto
     private static String origemToString(Origem origem) {
-        switch (origem) {
-            case CHINA: return "China";
-            case UE: return "União Europeia";
-            case JAPAO: return "Japão";
-            case COREIA: return "Coreia do Sul";
-            case VIETNA: return "Vietnã";
-            case TAILANDIA: return "Tailândia";
-            case CANADA: return "Canadá";
-            case MEXICO: return "México";
-            case BRASIL: return "Brasil";
-            default: return "Outros";
-        }
+        return switch (origem) {
+            case CHINA -> "China";
+            case UE -> "União Europeia";
+            case JAPAO -> "Japão";
+            case COREIA -> "Coreia do Sul";
+            case VIETNA -> "Vietnã";
+            case TAILANDIA -> "Tailândia";
+            case CANADA -> "Canadá";
+            case MEXICO -> "México";
+            case BRASIL -> "Brasil";
+            default -> "Outros";
+        };
     }
 
     private static String categoriaToString(Categoria categoria) {
-        switch (categoria) {
-            case GERAL: return "Geral";
-            case FARMACOS: return "Fármacos";
-            case SEMICONDUTORES: return "Semicondutores";
-            case COBRE: return "Cobre";
-            case MADEIRA: return "Madeira";
-            case ENERGIA_MINERAIS: return "Energia/Minerais";
-            case BULLION: return "Bullion";
-            default: return "Geral";
-        }
+        return switch (categoria) {
+            case FARMACOS -> "Fármacos";
+            case SEMICONDUTORES -> "Semicondutores";
+            case COBRE -> "Cobre";
+            case MADEIRA -> "Madeira";
+            case ENERGIA_MINERAIS -> "Energia/Minerais";
+            case BULLION -> "Bullion";
+            default -> "Geral";
+        };
     }
 }
